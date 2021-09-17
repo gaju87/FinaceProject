@@ -1,0 +1,123 @@
+<div class="col-md-7 grid-margin stretch-card" role="form">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Customer Enquiry</h4>
+            <p class="card-description">
+                <label class="badge badge-outline-danger" for="exampleInputName1">Relationship Executive</label>
+            </p>
+            <form class="forms-sample" [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+
+                <!-- <div class="modal demo-modal">
+                    <div class="modal-dialog"> -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <div class="form-group row">
+                                    <label for="exampleInputUsername2" class="col-sm-6 col-form-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputUsername2"
+                                            placeholder="name" formControlName="name">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="exampleInputUsername2" class="col-sm-6 col-form-label">Contact</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputUsername2"
+                                            placeholder="mobile no." formControlName="mobNo">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="birthDate" class="col-sm-12 control-label">Date of Birth</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" id="Date" class="form-control" formControlName="dob">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="birthDate" class="col-sm-12 control-label">Pancard no</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="Date" class="form-control" formControlName="panNo">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-12 col-form-label">Occupation</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" formControlName="occupation">
+                                                    <option>Govt.Service</option>
+                                                    <option>Teacher</option>
+                                                    <option>Business</option>
+                                                    <option>Farmer</option>
+                                                    <option>Self Employeed</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="birthDate" class="col-sm-12 control-label">Annual Income</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" id="Date" class="form-control"
+                                            formControlName="annualIncome">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleTextarea1">Address</label>
+                                    <textarea class="form-control" id="exampleTextarea1" rows="4"
+                                        formControlName="address"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="pqr@xbox.com"
+                                        formControlName="email">
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-12 col-form-label">Cibil Status</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" formControlName="cibilStatus">
+                                                    <option>Pending</option>
+                                                    <option>Approved</option>
+                                                    <option>Rejected</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+
+
+
+                <div class="form-check mx-sm-2">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" checked>
+                      I accept terms
+                      <i class="input-helper"></i>
+                    </label>
+                  </div>
+
+                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

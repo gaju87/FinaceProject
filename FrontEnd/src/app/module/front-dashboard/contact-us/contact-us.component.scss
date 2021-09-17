@@ -1,0 +1,269 @@
+
+@import 'src/styles.scss';
+:host {
+  width: 100%;
+}
+.footer {
+  background: $footer-bg;
+  color: $footer-color;
+  padding: 20px 1rem;
+  transition: all $action-transition-duration $action-transition-timing-function;
+  -moz-transition: all $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: all $action-transition-duration $action-transition-timing-function;
+  -ms-transition: all $action-transition-duration $action-transition-timing-function;
+  width: 100%;
+  border-top: $border-width solid $border-color;
+  font-size: calc(#{$default-font-size} - 0.05rem);
+  font-family: $type1-regular;
+  a {
+    color: theme-color(success);
+    font-size: inherit;
+  }
+  @media (max-width: 991px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+body {
+    color: #ffffff
+}
+
+.box {
+    margin: auto
+}
+
+.card {
+    padding: 8%;
+    padding-top: 35px;
+    margin-top: 60px;
+    margin-bottom: 80px
+}
+
+textarea[name="message"] {
+    resize: none
+}
+
+#e-mail {
+    height: 45px
+}
+
+#message {
+    height: 120px
+}
+
+input.input-box,
+textarea.input-box {
+    background-color: #616161;
+    border: #616161;
+    color: #BDBDBD
+}
+
+input.input-box:focus,
+textarea.input-box:focus {
+    background-color: #000000;
+    color: #BDBDBD
+}
+
+.rm-border:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+form .form-control::-webkit-input-placeholder {
+    color: #9E9E9E
+}
+
+::-moz-placeholder {
+    color: #9E9E9E !important
+}
+
+input.btn-purple {
+    background-color: #5C6BC0;
+    color: #ffffff
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+  }
+  .team-section{
+    background: #f1f1f1;
+    text-align: center;
+  }
+  .inner-width{
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    color: #333;
+    overflow: hidden;
+  }
+  .team-section h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+  }
+  .pe{
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+    transition: 0.4s;
+    
+  }
+  .pe:hover{
+    background: rgb(142, 143, 141);
+    
+  }
+  .pe img{
+    width: 120px;
+    height: 120px;
+  }
+  .p-name{
+    margin: 16px 0;
+    text-transform: uppercase;
+  }
+  .p-des{
+    font-style: italic;
+    color: #3498db;
+  }
+  .p-sm{
+    margin-top: 12px;
+  }
+  .p-sm a{
+    margin: 0 4px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: 0.4s;
+  }
+  .p-sm a:hover{
+    transform: scale(1.3);
+  }
+  .p-sm a i{
+    color: #333;
+    line-height: 30px;
+  }
+  @media screen and (max-width:600px) {
+    .pe{
+      width: 100%;
+    }
+  }
+
+
+  .fa {
+    padding-top: 10px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    animation: forwards;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+    color: black;
+   
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+/*  Instagram   */
+    .fa-instagram {
+    background: #ee081b;
+    color: white;
+  }
+
+
+  /*pavan*/
+  
+  * {
+      -webkit-tap-highlight-color: transparent;
+  }
+  user agent stylesheet
+  div {
+      display: block;
+  }
+  .pZxRx {
+      display: flex;
+      flex-flow: column;
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+  }
+  .jY7uzd {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5em;
+      min-height: 100%;
+      padding: 0 0 56px;
+      position: relative;
+  }
+  .N6bHlf {
+      font-family: 'Lato',sans-serif;
+      font-weight: 400;
+  }
+  body {
+      height: 100%;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      color: #202124;
+      font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+      margin: 0;
+      text-size-adjust: 100%;
+  }
+  
+  /*abhi aayega maja*/
+
+.whatsapp_float{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  
+}
+
+
+.btn-success
+{
+  font-weight: bold;
+  font-size: 15px;
+  margin: auto;
+  margin-top: 2px;
+
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-weight: bolder;
+    
+}
+.nav-item{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+

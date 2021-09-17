@@ -1,0 +1,61 @@
+
+
+    <div class="col-lg-11 grid-margin stretch-card" role="form">
+      <div class="card">
+        <div class="card-body" id="mylist">
+          <h4 class="card-title">Approved Client's</h4>
+          <p class="card-description">
+            <label class="badge badge-outline-danger" for="exampleInputName1">Operational Executive</label>
+          </p>
+          <div class="table-responsive">
+            <table class="table table-hover table-striped" >
+              <thead>
+                <tr>
+                  <th scope="col">Enquiry Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Cibil Id</th>
+                  <th scope="col">Cibil Score</th>
+                  <th scope="col">Cibil Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let join of cibilEnquiryjoin">
+                  <td>{{ join.enqId }}</td>
+                  <td>{{ join.name }}</td>
+                  <td>{{ join.email }}</td>
+                  <td>{{ join.cid }}</td>
+                  <td>{{ join.cibilscore }}</td>
+                  <td><label class="badge badge-gradient-info">{{ join.oeremark }}</label></td>  
+                  <td><button type="submit" class="btn btn-gradient-primary mb-2" (click)="sendEmail(join.email)" >Send Email</button></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <hr>
+
+            <button class="btn btn-outline-dark btn-icon-text">
+              <i class="mdi mdi-android-debug-bridge btn-icon-prepend mdi-36px"></i>
+              <span class="d-inline-block text-left">
+                <small class="font-weight-light d-block" (click)="generatePdf()">Get approved list</small>
+                Generate PDF
+              </span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+

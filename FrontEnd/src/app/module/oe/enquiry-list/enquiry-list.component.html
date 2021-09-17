@@ -1,0 +1,78 @@
+<div class="col-lg-15 grid-margin stretch-card" role="form">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Customer Enquires</h4>
+      <p class="card-description">
+        <label class="badge badge-outline-danger" for="exampleInputName1">Operational Executive</label>
+      </p>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Mob__no</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Pan_no</th>
+              <th>Birth_Date_</th>
+              <th>Occupation</th>
+              <th>Annual_Income</th>
+              <th>Cibil_Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let enq of enqList | paginate : {itemsPerPage: count, currentPage: p}" >
+              <td>{{ enq.enqId }}</td>
+              <td>{{ enq.name }}</td>
+              <td>{{ enq.mobNo }}</td>
+              <td>{{ enq.address }}</td>
+              <td>{{ enq.email }}</td>
+              <td>{{ enq.panNo }}</td>
+              <td>{{ enq.dob }}</td>
+              <td>{{ enq.occupation }}</td>
+              <td>{{ enq.annualIncome }}</td>
+              <td *ngIf="enq.cibilStatus=='Approved'">
+                <label class="badge badge-gradient-info" >{{ enq.cibilStatus }}</label>
+              </td> 
+              <td *ngIf="enq.cibilStatus=='Rejected'">
+                <label class="badge badge-gradient-danger" >{{ enq.cibilStatus }}</label>
+              </td>  
+              <td *ngIf="enq.cibilStatus=='Pending'">
+                <label class="badge badge-gradient-warning" >{{ enq.cibilStatus }}</label>
+              </td>  
+              <td><button type="submit" class="btn btn-gradient-primary mb-2" [routerLink]="['/oe-layout/oe/cibil']" [state]="enq">Cibil Check</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col-md-9 col-sm-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <ngb-pagination 
+
+              [collectionSize]="40" 
+              [pageSize]="10" 
+              [page]="1" 
+              aria-label="Default pagination" 
+              class="d-flex justify-content-start" 
+              (pageChange)="onTableDataChange($event)">
+              
+            </ngb-pagination>        
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

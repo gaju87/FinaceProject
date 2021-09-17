@@ -1,0 +1,109 @@
+<div class="col-md-8 grid-margin stretch-card" role="form">
+    <div class="card ">
+        <div class="card-body">
+            <h4 class="card-title ">Cibil Generation</h4>
+            <p class="card-description">
+                <label class="badge badge-outline-danger " for="exampleInputName1">Operational Executive</label>
+            </p>
+
+            <form class="forms-sample" [formGroup]="cibilForm" (ngSubmit)="onSubmit()">
+
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+
+                                <div class="form-group row">
+                                    <label for="exampleInputUsername2" class="col-sm-6 col-form-label">Customer Enquiry
+                                        Id</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" id="exampleInputUsername2"
+                                            placeholder="enquiry id" formControlName="enqid1">
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-12 col-form-label">Pancard Status</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" formControlName="panstatus">
+                                                    <option>Active</option>
+                                                    <option>Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="cibil score"
+                                            aria-label="Recipient's username" formControlName="cibilscore">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-sm btn-facebook" type="button"
+                                                (click)="generateCibil()">
+                                                <i class="fa fa-share">Generate</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row">
+                                    <label for="birthDate" class="col-sm-12 control-label">Generation Date</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" id="Date" class="form-control"
+                                            formControlName="cibilgenerateddate">
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-sm-9 col-form-label">Remark</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" formControlName="oeremark">
+                                                    <option>Pending</option>
+                                                    <option>Approved</option>
+                                                    <option>Rejected</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="form-check form-check-flat form-check-primary">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        I accept terms & conditions
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+
+
+
+                                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button> &nbsp;
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn btn-light">Cancel</button>
+
+
+                            </div>
+                        </div>
+            </form>
+
+  
+
+        </div>
+    </div>
+</div>

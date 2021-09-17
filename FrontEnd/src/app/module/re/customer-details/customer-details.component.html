@@ -1,0 +1,555 @@
+<div class="col-md-9 grid-margin stretch-card" role="form">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Client's Details</h4>
+            <p class="card-description">
+            <label class="badge badge-outline-danger" for="exampleInputName1">Relationship Executive</label> 
+            </p>
+
+            <form class="forms-sample" [formGroup]="customerDetailForm" (ngSubmit)="onSubmit()">
+
+
+
+                <!-- <div class="modal demo-modal">-->
+                    <!-- <div class="modal-dialog">  -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <ol class="breadcrumb bg-inverse-danger">
+                                    <li class="breadcrumb-item"><a href="javascript:;">Customer</a></li>
+                                </ol>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputUsername2"
+                                            placeholder="name" formControlName="name">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Contact</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputUsername2"
+                                            placeholder="+91-" formControlName="mobNo">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputMobile"
+                                            placeholder="Mobile number">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Email</label>
+                                    <div class="col-sm-9">
+                                        <input type="email" class="form-control" id="exampleInputMobile"
+                                            placeholder="email@example.com" formControlName="email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Family
+                                        Members</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputMobile"
+                                            formControlName="familyMember">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Dependent
+                                        Members</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputMobile"
+                                            formControlName="dependantMember">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Permenant
+                                        Address</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputMobile"
+                                            formControlName="permanetAddress">
+                                    </div>
+                                </div>
+
+                                <div class="form-check form-check-danger">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"
+                                            (change)="addresCheckbox($event)">
+                                        Is your permanent address same as that of local address ???
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Local
+                                        Address</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="exampleInputMobile"
+                                            formControlName="localAddress">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Required Loan
+                                        Amt</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" id="exampleInputMobile"
+                                            formControlName="requiredAmount">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">DownPaymentt</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" id="exampleInputMobile"
+                                            formControlName="downPayment">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Tenure</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" class="form-control" id="exampleInputMobile"
+                                            formControlName="tenure">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- ----------------------------------------------------------------------------------Gaurenter ------------------>
+                <hr>
+                <!-- <div class="modal demo-modal">
+                    <div class="modal-dialog"> -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <ol class="breadcrumb bg-inverse-danger">
+                                    <li class="breadcrumb-item"><a href="javascript:;">Customer</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Guarantor</li>
+                                </ol>
+
+                                <div formGroupName="guarantor">
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="name" placeholder="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mob no</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="mobNo" placeholder="+91-">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Adhar no</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="adharcardNo" placeholder="### ### ###">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-9 col-form-label">Occupation</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" formControlName="occupation">
+                                                        <option>Teacher</option>
+                                                        <option>Doctor</option>
+                                                        <option>Professor</option>
+                                                        <option>Goverment Service</option>
+                                                        <option>Doctor</option>
+                                                        <option>Business</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+               
+                <!-- ---------------------------------------------------------------------Previous Loan-------------------------------------------------- -->
+                <hr>
+                <!-- <div class="modal demo-modal">
+                    <div class="modal-dialog"> -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <ol class="breadcrumb bg-inverse-danger">
+                                    <li class="breadcrumb-item"><a href="javascript:;">Customer</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Previous Loan</li>
+                                </ol>
+
+                                <div formGroupName="preLoanDetails">
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Loan
+                                            Type</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="laonType">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Loan
+                                            Amount</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="exampleInputMobile"
+                                                formControlName="loanAmount">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Remaining Loan
+                                            Amount</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="exampleInputMobile"
+                                                formControlName="remaingLoan">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Tenure
+                                            Pending</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="exampleInputMobile"
+                                                formControlName="tenurePending">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Privious Loan
+                                            Bank</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="exampleInputMobile"
+                                                formControlName="previousLoanBank">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+
+                <!-- --------------------------------------------------------------------------------Product------------------------- -->
+                <hr>
+                <!-- <div class="modal demo-modal">
+                    <div class="modal-dialog"> -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <ol class="breadcrumb bg-inverse-danger">
+                                    <li class="breadcrumb-item"><a href="javascript:;">Customer</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">product</li>
+                                </ol>
+
+                                <div formGroupName="product">
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">product
+                                            Company</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="vechileCompanyName">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Model</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="modelName">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Colour</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="colour">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">On Road
+                                            Price</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" class="form-control" id="exampleInputMobile"
+                                                formControlName="onRoadPrice">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Engine
+                                            Type</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="engineType">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+
+                <!-- -------------------------------------------------------------------------Dealer--------------------------------------- -->
+
+                <hr>
+                <!-- <div class="modal demo-modal">
+                    <div class="modal-dialog"> -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <ol class="breadcrumb bg-inverse-danger">
+                                    <li class="breadcrumb-item"><a href="javascript:;">Customer</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Dealer</li>
+                                </ol>
+
+                                <div formGroupName="dealer">
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="dname">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Acc no</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="dealerAcctNo">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mob no</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="dealerMoBNo">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="exampleInputMobile"
+                                                formControlName="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-9 col-form-label">Status</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control" formControlName="status">
+                                                        <option>Active</option>
+                                                        <option>Inactive</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- --------------------------------Dealer Bank----------------------- -->
+                                    <hr>
+                                    <!-- <div class="modal demo-modal"> -->
+                                        <!-- <div class="modal-dialog"> -->
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+
+                                                    <ol class="breadcrumb bg-inverse-danger">
+                                                        <li class="breadcrumb-item"><a href="javascript:;">Customer</a>
+                                                        </li>
+                                                        <li class="breadcrumb-item"><a href="javascript:;">Dealer</a>
+                                                        </li>
+                                                        <li class="breadcrumb-item active" aria-current="page">Bank</li>
+                                                    </ol>
+
+                                                    <div formGroupName="dealerBank">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-9 col-form-label">Name</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-control"
+                                                                            formControlName="bankName">
+                                                                            <option>SBI</option>
+                                                                            <option>ICICI</option>
+                                                                            <option>HDFC</option>
+                                                                            <option>PNB</option>
+                                                                            <option>CBI</option>
+                                                                            <option>PNB</option>
+                                                                            <option>IDBI</option>
+                                                                            <option>AXIS</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group row">
+                                                                    <label
+                                                                        class="col-sm-9 col-form-label">Status</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-control"
+                                                                            formControlName="status">
+                                                                            <option>Active</option>
+                                                                            <option>Inactive</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group row">
+                                                            <label for="exampleInputMobile"
+                                                                class="col-sm-3 col-form-label">Address</label>
+                                                            <div class="col-sm-9">
+                                                                <input type="text" class="form-control"
+                                                                    id="exampleInputMobile" formControlName="address">
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- ---------Branch-------------------------------------- -->
+                                                        <hr>
+                                                        <!-- <div class="modal demo-modal">
+                                                            <div class="modal-dialog"> -->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-body">
+
+                                                                        <ol class="breadcrumb bg-inverse-danger">
+                                                                            <li class="breadcrumb-item"><a
+                                                                                    href="javascript:;">Customer</a>
+                                                                            </li>
+                                                                            <li class="breadcrumb-item"><a
+                                                                                    href="javascript:;">Dealer</a></li>
+                                                                            <li class="breadcrumb-item"><a
+                                                                                    href="javascript:;">Bank</a></li>
+                                                                            <li class="breadcrumb-item active"
+                                                                                aria-current="page">Branch</li>
+                                                                        </ol>
+
+                                                                        <div formGroupName="branch">
+
+                                                                            <div class="form-group row">
+                                                                                <label for="exampleInputMobile"
+                                                                                    class="col-sm-3 col-form-label">Name</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputMobile"
+                                                                                        formControlName="branchName">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group row">
+                                                                                <label for="exampleInputMobile"
+                                                                                    class="col-sm-3 col-form-label">IFSC
+                                                                                    Code</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputMobile"
+                                                                                        formControlName="ifscCode">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group row">
+                                                                                <label for="exampleInputMobile"
+                                                                                    class="col-sm-3 col-form-label">Address</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputMobile"
+                                                                                        formControlName="branchAddress">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group row">
+                                                                                <label for="exampleInputMobile"
+                                                                                    class="col-sm-3 col-form-label">Pincode</label>
+                                                                                <div class="col-sm-9">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        id="exampleInputMobile"
+                                                                                        formControlName="pincode"
+                                                                                        placeholder="4#####">
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            <!-- </div>
+                                                        </div>  -->
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        <!-- </div>
+                                    </div> -->
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    <!-- </div>
+                </div> -->
+
+
+
+
+
+
+
+                <div class="form-check form-check-flat form-check-primary">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        I accept terms & conditions
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
